@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C14964F2BE6DE5A00487904 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C14964E2BE6DE5A00487904 /* LoginService.swift */; };
+		0C1496572BE6DE7500487904 /* LoginUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1496562BE6DE7500487904 /* LoginUi.swift */; };
 		0CB9AB502BE6DDCF00299A6B /* notiAutoSystemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9AB4F2BE6DDCF00299A6B /* notiAutoSystemApp.swift */; };
 		0CB9AB522BE6DDCF00299A6B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9AB512BE6DDCF00299A6B /* ContentView.swift */; };
 		0CB9AB542BE6DDD100299A6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CB9AB532BE6DDD100299A6B /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C14964E2BE6DE5A00487904 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		0C1496562BE6DE7500487904 /* LoginUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUi.swift; sourceTree = "<group>"; };
 		0CB9AB4C2BE6DDCF00299A6B /* notiAutoSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notiAutoSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB9AB4F2BE6DDCF00299A6B /* notiAutoSystemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notiAutoSystemApp.swift; sourceTree = "<group>"; };
 		0CB9AB512BE6DDCF00299A6B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C14964D2BE6DE0B00487904 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0C14964E2BE6DE5A00487904 /* LoginService.swift */,
+				0C1496562BE6DE7500487904 /* LoginUi.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		0CB9AB432BE6DDCE00299A6B = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +108,7 @@
 		0CB9AB4E2BE6DDCF00299A6B /* notiAutoSystem */ = {
 			isa = PBXGroup;
 			children = (
+				0C14964D2BE6DE0B00487904 /* Login */,
 				0CB9AB4F2BE6DDCF00299A6B /* notiAutoSystemApp.swift */,
 				0CB9AB512BE6DDCF00299A6B /* ContentView.swift */,
 				0CB9AB532BE6DDD100299A6B /* Assets.xcassets */,
@@ -260,7 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CB9AB522BE6DDCF00299A6B /* ContentView.swift in Sources */,
+				0C14964F2BE6DE5A00487904 /* LoginService.swift in Sources */,
 				0CB9AB502BE6DDCF00299A6B /* notiAutoSystemApp.swift in Sources */,
+				0C1496572BE6DE7500487904 /* LoginUi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
