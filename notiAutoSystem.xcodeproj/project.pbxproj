@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C14964F2BE6DE5A00487904 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C14964E2BE6DE5A00487904 /* LoginService.swift */; };
-		0C1496572BE6DE7500487904 /* LoginUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1496562BE6DE7500487904 /* LoginUi.swift */; };
 		0CB9AB502BE6DDCF00299A6B /* notiAutoSystemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9AB4F2BE6DDCF00299A6B /* notiAutoSystemApp.swift */; };
 		0CB9AB522BE6DDCF00299A6B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9AB512BE6DDCF00299A6B /* ContentView.swift */; };
 		0CB9AB542BE6DDD100299A6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CB9AB532BE6DDD100299A6B /* Assets.xcassets */; };
 		0CB9AB572BE6DDD100299A6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CB9AB562BE6DDD100299A6B /* Preview Assets.xcassets */; };
 		0CB9AB622BE6DDD100299A6B /* notiAutoSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9AB612BE6DDD100299A6B /* notiAutoSystemTests.swift */; };
 		0CB9AB6D2BE6DDD100299A6B /* notiAutoSystemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9AB6C2BE6DDD100299A6B /* notiAutoSystemUITests.swift */; };
+		D98748DF2BF66F7F00DFAE63 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98748DE2BF66F7F00DFAE63 /* MenuView.swift */; };
+		D98748E72BF6734300DFAE63 /* ItemMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98748E62BF6734300DFAE63 /* ItemMenuView.swift */; };
+		D98748F22BF67ED200DFAE63 /* EmployeeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98748F12BF67ED200DFAE63 /* EmployeeTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C14964E2BE6DE5A00487904 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		0C1496562BE6DE7500487904 /* LoginUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUi.swift; sourceTree = "<group>"; };
 		0CB9AB4C2BE6DDCF00299A6B /* notiAutoSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notiAutoSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB9AB4F2BE6DDCF00299A6B /* notiAutoSystemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notiAutoSystemApp.swift; sourceTree = "<group>"; };
 		0CB9AB512BE6DDCF00299A6B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +48,9 @@
 		0CB9AB682BE6DDD100299A6B /* notiAutoSystemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = notiAutoSystemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB9AB6C2BE6DDD100299A6B /* notiAutoSystemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notiAutoSystemUITests.swift; sourceTree = "<group>"; };
 		0CB9AB6E2BE6DDD100299A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D98748DE2BF66F7F00DFAE63 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		D98748E62BF6734300DFAE63 /* ItemMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenuView.swift; sourceTree = "<group>"; };
+		D98748F12BF67ED200DFAE63 /* EmployeeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,15 +78,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C14964D2BE6DE0B00487904 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				0C14964E2BE6DE5A00487904 /* LoginService.swift */,
-				0C1496562BE6DE7500487904 /* LoginUi.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		0CB9AB432BE6DDCE00299A6B = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +101,8 @@
 		0CB9AB4E2BE6DDCF00299A6B /* notiAutoSystem */ = {
 			isa = PBXGroup;
 			children = (
-				0C14964D2BE6DE0B00487904 /* Login */,
+				D98748DD2BF66F6300DFAE63 /* Menu */,
+				D98748D92BF66F2500DFAE63 /* Employe */,
 				0CB9AB4F2BE6DDCF00299A6B /* notiAutoSystemApp.swift */,
 				0CB9AB512BE6DDCF00299A6B /* ContentView.swift */,
 				0CB9AB532BE6DDD100299A6B /* Assets.xcassets */,
@@ -142,6 +136,23 @@
 				0CB9AB6E2BE6DDD100299A6B /* Info.plist */,
 			);
 			path = notiAutoSystemUITests;
+			sourceTree = "<group>";
+		};
+		D98748D92BF66F2500DFAE63 /* Employe */ = {
+			isa = PBXGroup;
+			children = (
+				D98748F12BF67ED200DFAE63 /* EmployeeTableView.swift */,
+			);
+			path = Employe;
+			sourceTree = "<group>";
+		};
+		D98748DD2BF66F6300DFAE63 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				D98748DE2BF66F7F00DFAE63 /* MenuView.swift */,
+				D98748E62BF6734300DFAE63 /* ItemMenuView.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,10 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98748F22BF67ED200DFAE63 /* EmployeeTableView.swift in Sources */,
+				D98748DF2BF66F7F00DFAE63 /* MenuView.swift in Sources */,
 				0CB9AB522BE6DDCF00299A6B /* ContentView.swift in Sources */,
-				0C14964F2BE6DE5A00487904 /* LoginService.swift in Sources */,
+				D98748E72BF6734300DFAE63 /* ItemMenuView.swift in Sources */,
 				0CB9AB502BE6DDCF00299A6B /* notiAutoSystemApp.swift in Sources */,
-				0C1496572BE6DE7500487904 /* LoginUi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
