@@ -16,7 +16,7 @@ struct MenuView: View {
                     ItemMenuView(iconMenu: "person.fill", labelMenu: "Clientes", descriptionMenu: "Menu de clientes y sus vehiculos")
                 }
                 
-                NavigationLink(destination: EmployeeTableView()){
+                NavigationLink(destination: EmployeeViewTable()){
                     ItemMenuView(iconMenu: "wrench.fill", labelMenu: "Empleados", descriptionMenu: "Menu de mecanicos y tecnicos")
                 }
                 

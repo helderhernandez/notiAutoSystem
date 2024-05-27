@@ -15,7 +15,7 @@
 		0CB9AB6D2BE6DDD100299A6B /* notiAutoSystemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9AB6C2BE6DDD100299A6B /* notiAutoSystemUITests.swift */; };
 		D98748DF2BF66F7F00DFAE63 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98748DE2BF66F7F00DFAE63 /* MenuView.swift */; };
 		D98748E72BF6734300DFAE63 /* ItemMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98748E62BF6734300DFAE63 /* ItemMenuView.swift */; };
-		D98748F22BF67ED200DFAE63 /* EmployeeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98748F12BF67ED200DFAE63 /* EmployeeTableView.swift */; };
+		D98748F22BF67ED200DFAE63 /* EmployeeViewTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98748F12BF67ED200DFAE63 /* EmployeeViewTable.swift */; };
 		F1420FF12C04DAE4003CCC91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1420FF02C04DAE4003CCC91 /* GoogleService-Info.plist */; };
 		F1420FF72C04DD3E003CCC91 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F1420FF62C04DD3E003CCC91 /* FirebaseAnalytics */; };
 		F1420FF92C04DD3E003CCC91 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F1420FF82C04DD3E003CCC91 /* FirebaseFirestoreSwift */; };
@@ -24,6 +24,8 @@
 		F1420FFF2C04DD3E003CCC91 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F1420FFE2C04DD3E003CCC91 /* FirebaseAnalyticsSwift */; };
 		F14210012C04DD3E003CCC91 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F14210002C04DD3E003CCC91 /* FirebaseFirestore */; };
 		F14210062C04E1F1003CCC91 /* EmployeeFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14210052C04E1F1003CCC91 /* EmployeeFirestore.swift */; };
+		F142100B2C04E4B9003CCC91 /* EmployeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142100A2C04E4B9003CCC91 /* EmployeeRepository.swift */; };
+		F14210102C04E5DA003CCC91 /* EmployeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142100F2C04E5DA003CCC91 /* EmployeeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +60,11 @@
 		0CB9AB6E2BE6DDD100299A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D98748DE2BF66F7F00DFAE63 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		D98748E62BF6734300DFAE63 /* ItemMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenuView.swift; sourceTree = "<group>"; };
-		D98748F12BF67ED200DFAE63 /* EmployeeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableView.swift; sourceTree = "<group>"; };
+		D98748F12BF67ED200DFAE63 /* EmployeeViewTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewTable.swift; sourceTree = "<group>"; };
 		F1420FF02C04DAE4003CCC91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F14210052C04E1F1003CCC91 /* EmployeeFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeFirestore.swift; sourceTree = "<group>"; };
+		F142100A2C04E4B9003CCC91 /* EmployeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepository.swift; sourceTree = "<group>"; };
+		F142100F2C04E5DA003CCC91 /* EmployeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +162,10 @@
 		D98748D92BF66F2500DFAE63 /* Employee */ = {
 			isa = PBXGroup;
 			children = (
-				D98748F12BF67ED200DFAE63 /* EmployeeTableView.swift */,
 				F14210052C04E1F1003CCC91 /* EmployeeFirestore.swift */,
+				F142100A2C04E4B9003CCC91 /* EmployeeRepository.swift */,
+				F142100F2C04E5DA003CCC91 /* EmployeeService.swift */,
+				D98748F12BF67ED200DFAE63 /* EmployeeViewTable.swift */,
 			);
 			path = Employee;
 			sourceTree = "<group>";
@@ -314,8 +320,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D98748F22BF67ED200DFAE63 /* EmployeeTableView.swift in Sources */,
+				D98748F22BF67ED200DFAE63 /* EmployeeViewTable.swift in Sources */,
+				F14210102C04E5DA003CCC91 /* EmployeeService.swift in Sources */,
 				D98748DF2BF66F7F00DFAE63 /* MenuView.swift in Sources */,
+				F142100B2C04E4B9003CCC91 /* EmployeeRepository.swift in Sources */,
 				0CB9AB522BE6DDCF00299A6B /* ContentView.swift in Sources */,
 				D98748E72BF6734300DFAE63 /* ItemMenuView.swift in Sources */,
 				0CB9AB502BE6DDCF00299A6B /* notiAutoSystemApp.swift in Sources */,

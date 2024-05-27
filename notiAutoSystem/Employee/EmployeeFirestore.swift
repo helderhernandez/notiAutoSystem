@@ -25,7 +25,7 @@ final class EmployeeFirestore {
     private let database = Firestore.firestore()
     private let EMPLOYEE_COLLECTION = "employees" // nombre de la collection
     
-    func getAllLinks(completionBlock: @escaping (Result<[EmployeeModel], Error>) -> Void) {
+    func getAll(completionBlock: @escaping (Result<[EmployeeModel], Error>) -> Void) {
         database.collection(EMPLOYEE_COLLECTION) // accedemos a la collection
             .addSnapshotListener { query, error in
                 // manejando error (si existiese)
