@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAfZlmZWwD2XLfUTYOfHYa6WBUxXPXVZQI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>555695666726</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>utec.notiAutoSystem</string>
+	<key>PROJECT_ID</key>
+	<string>notiautosystem-b5a1d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>notiautosystem-b5a1d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:555695666726:ios:a0f215147f55a08a0618e7</string>
+</dict>
+</plist>
