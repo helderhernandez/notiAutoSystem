@@ -12,18 +12,11 @@ struct EmployeeViewItemTable: View {
     
     var body: some View {
        
-        HStack{
-            Image(systemName: "person.fill")
-                .resizable()
-                .frame(width: 20, height: 20)
-                .padding()
-            
-            VStack(alignment: .leading){
-                Text(employee.name).font(.title)
-                Text("💳 DUI: \(employee.dui)").font(.subheadline)
-                Divider()
-                Text("🛠 Skills: \(employee.skills.joined(separator: ", "))")
-            }
+        VStack(alignment: .leading){
+            Text(employee.name).font(.title)
+            Text("💳 DUI: \(employee.dui)").font(.subheadline)
+            Divider()
+            Text("🛠 Skills: \(employee.skills.joined(separator: ", "))")
         }
     }
 }

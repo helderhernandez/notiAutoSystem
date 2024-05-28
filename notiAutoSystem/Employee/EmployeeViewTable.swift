@@ -11,17 +11,30 @@ struct EmployeeViewTable: View {
     @ObservedObject var employeeService: EmployeeService = EmployeeService()
     
     var body: some View {
-        // listado de empleados
-        List {
-            ForEach(employeeService.employees) { employee in
-                VStack {
-                    EmployeeViewItemTable(employee: employee)
+        NavigationView{
+            // listado de empleados
+            List {
+                ForEach(employeeService.employees) { employee in
+                    VStack {
+                        NavigationLink(destination: EmployeeViewNewRecord()){
+                            EmployeeViewItemTable(employee: employee)
+                        }
+                    }
+                }
+            }
+            .onAppear() {
+                employeeService.getAll()
+            }
+            //.navigationBarTitleDisplayMode(.inline)
+            //.navigationBarHidden(false)
+            .navigationBarTitle("Empleados", displayMode:.inline)
+            .toolbar {
+                NavigationLink(destination: EmployeeViewNewRecord()){
+                    Text("➕")
                 }
             }
         }
-        .onAppear() {
-            employeeService.getAll()
-        }
+       
     }
 }
 
