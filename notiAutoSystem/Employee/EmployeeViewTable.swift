@@ -16,7 +16,7 @@ struct EmployeeViewTable: View {
             List {
                 ForEach(employeeService.employees) { employee in
                     VStack {
-                        NavigationLink(destination: EmployeeViewNewRecord()){
+                        NavigationLink(destination: EmployeeViewEditRecord()){
                             EmployeeViewItemTable(employee: employee)
                         }
                     }
@@ -29,7 +29,7 @@ struct EmployeeViewTable: View {
             //.navigationBarHidden(false)
             .navigationBarTitle("Empleados", displayMode:.inline)
             .toolbar {
-                NavigationLink(destination: EmployeeViewNewRecord()){
+                NavigationLink(destination: EmployeeViewNewRecord(employeeService: employeeService)){
                     Text("➕")
                 }
             }
