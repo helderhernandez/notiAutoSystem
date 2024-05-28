@@ -26,6 +26,7 @@
 		F14210062C04E1F1003CCC91 /* EmployeeFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14210052C04E1F1003CCC91 /* EmployeeFirestore.swift */; };
 		F142100B2C04E4B9003CCC91 /* EmployeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142100A2C04E4B9003CCC91 /* EmployeeRepository.swift */; };
 		F14210102C04E5DA003CCC91 /* EmployeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142100F2C04E5DA003CCC91 /* EmployeeService.swift */; };
+		F1B689EA2C0617C80033B159 /* EmployeeViewItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B689E92C0617C80033B159 /* EmployeeViewItemTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		F14210052C04E1F1003CCC91 /* EmployeeFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeFirestore.swift; sourceTree = "<group>"; };
 		F142100A2C04E4B9003CCC91 /* EmployeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepository.swift; sourceTree = "<group>"; };
 		F142100F2C04E5DA003CCC91 /* EmployeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeService.swift; sourceTree = "<group>"; };
+		F1B689E92C0617C80033B159 /* EmployeeViewItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewItemTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				F142100A2C04E4B9003CCC91 /* EmployeeRepository.swift */,
 				F142100F2C04E5DA003CCC91 /* EmployeeService.swift */,
 				D98748F12BF67ED200DFAE63 /* EmployeeViewTable.swift */,
+				F1B689E92C0617C80033B159 /* EmployeeViewItemTable.swift */,
 			);
 			path = Employee;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1B689EA2C0617C80033B159 /* EmployeeViewItemTable.swift in Sources */,
 				D98748F22BF67ED200DFAE63 /* EmployeeViewTable.swift in Sources */,
 				F14210102C04E5DA003CCC91 /* EmployeeService.swift in Sources */,
 				D98748DF2BF66F7F00DFAE63 /* MenuView.swift in Sources */,
