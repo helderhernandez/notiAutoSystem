@@ -29,57 +29,35 @@ final class EmployeeService: ObservableObject {
         }
     }
     
-    /*
-    func createNewLink(fromURL url: String) {
-        /*
-        let numbers = [0]
-        let _ = numbers[1]
-        
-        Tracker.trackCreateLinkEvent(url: url)
-        */
-        
-        linkRepository.createNewLink(withURL: url) { [weak self] result in
-            switch result {
-            case .success(let link):
-                
-                // asignamos el nuevo link model al array que tenemos en memoria, aun no utilizamos firebase
-                // ya no es necesario el append, porque al guardar en firebase se refresca automaticamente
-                //self?.links.append(link)
-            
-                print("✅ New link \(link.title) added")
-                //Tracker.trackSaveLinkEvent()
-            case .failure(let error):
-                /*
-                DispatchQueue.main.async {
-                    self?.messageError = error.localizedDescription
-                    Tracker.trackErrorSaveLinkEvent(error: error.localizedDescription)
-                }
-            */
-                self?.messageError = error.localizedDescription
-            }
-        }
+   
+    func create(employee: EmployeeModel) {
+        // no include id-document (generate by firebase)
+        let newEmployee = EmployeeModel(
+            name: employee.name,
+            dui: employee.dui,
+            phone: employee.phone,
+            address: employee.address,
+            skills: employee.skills
+        )
+
+        employeeRepository.create(employee: newEmployee)
     }
     
-    func updateIsFavorited(link: LinkModel) {
-        let updatedLink = LinkModel(id: link.id,
-                                   url: link.url,
-                                   title: link.title,
-                                   isFavorited: link.isFavorited ? false : true,
-                                   isCompleted: link.isCompleted)
-        linkRepository.update(link: updatedLink)
+    func update(employee: EmployeeModel) {
+        let newEmployee = EmployeeModel(
+            id: employee.id,
+            name: employee.name,
+            dui: employee.dui,
+            phone: employee.phone,
+            address: employee.address,
+            skills: employee.skills
+        )
+
+        employeeRepository.update(employee: employee)
     }
     
-    func updateIsCompleted(link: LinkModel) {
-        let updatedLink = LinkModel(id: link.id,
-                                   url: link.url,
-                                   title: link.title,
-                                   isFavorited: link.isFavorited,
-                                   isCompleted: link.isCompleted ? false : true)
-        linkRepository.update(link: updatedLink)
+    func delete(employee: EmployeeModel) {
+        employeeRepository.delete(employee: employee)
     }
-    
-    func delete(link: LinkModel) {
-        linkRepository.delete(link: link)
-    }
- */
+
 }
