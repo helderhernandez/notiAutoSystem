@@ -10,8 +10,6 @@ import SwiftUI
 struct EmployeeViewItemTable: View {
     var employee: EmployeeModel
     
-    @ObservedObject var employeeService: EmployeeService
-    
     var body: some View {
        
         VStack(alignment: .leading){
@@ -19,20 +17,13 @@ struct EmployeeViewItemTable: View {
             Text("💳 DUI: \(employee.dui)").font(.subheadline)
             Divider()
             Text("🛠 Skills: \(employee.skills.joined(separator: ", "))")
-            Divider()
-            
-            Button(action: {
-                employeeService.delete(employee: employee) // delete in firestore
-            }) {
-                Text("Eliminar")
-            }
         }
     }
 }
 
 struct EmployeeViewItemTable_Previews: PreviewProvider {
     static var previews: some View {
-        var employeeExample = EmployeeModel(
+        let employeeExample = EmployeeModel(
             id: "0001",
             name: "Maraleni Diaz",
             dui: "05023937-7",
@@ -40,9 +31,9 @@ struct EmployeeViewItemTable_Previews: PreviewProvider {
             address: "Mejicanos, col. Buena Vista",
             skills: ["Torno", "Enderazado y pintura", "Electromecanico"]
         )
+        
         EmployeeViewItemTable(
-            employee: employeeExample,
-            employeeService: EmployeeService()
+            employee: employeeExample
         )
     }
 }

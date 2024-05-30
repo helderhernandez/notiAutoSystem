@@ -20,10 +20,6 @@ struct MenuView: View {
                     ItemMenuView(iconMenu: "wrench.fill", labelMenu: "Empleados", descriptionMenu: "Menu de mecanicos y tecnicos")
                 }
                 
-                /*NavigationLink(destination: Text("En construccion")){
-                    ItemMenuView(iconMenu: "doc.text.fill", labelMenu: "Facturación", descriptionMenu: "Menu facturas comerciales")
-                }*/
-                
                 NavigationLink(destination: Text("En construccion")){
                     ItemMenuView(iconMenu: "car.fill", labelMenu: "Mantenimiento", descriptionMenu: "Menu de mantenimiento de vehiculos")
                 }
@@ -35,7 +31,7 @@ struct MenuView: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(false)
         }
-        .navigationViewStyle(StackNavigationViewStyle()) // importante para no regresar el roort al hacer el dismiss()
+        .navigationViewStyle(StackNavigationViewStyle()) // importante para no regresar el root al hacer el dismiss()
         
     }
 }

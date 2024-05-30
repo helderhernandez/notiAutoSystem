@@ -15,12 +15,15 @@ struct EmployeeViewTable: View {
         List {
             ForEach(employeeService.employees) { employee in
                 VStack {
-                    NavigationLink(destination: EmployeeViewEditRecord()){
-                        EmployeeViewItemTable(
-                            employee: employee,
-                            employeeService: employeeService
+                    NavigationLink(
+                        // edit view
+                        destination: EmployeeViewEditRecord(
+                            employeeModel: employee
                         )
+                    ){
+                        EmployeeViewItemTable(employee: employee)
                     }
+                    .padding()
                 }
             }
         }
