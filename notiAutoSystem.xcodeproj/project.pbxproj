@@ -171,8 +171,7 @@
 				F14210052C04E1F1003CCC91 /* EmployeeFirestore.swift */,
 				F142100A2C04E4B9003CCC91 /* EmployeeRepository.swift */,
 				F142100F2C04E5DA003CCC91 /* EmployeeService.swift */,
-				D98748F12BF67ED200DFAE63 /* EmployeeViewTable.swift */,
-				F1B689E92C0617C80033B159 /* EmployeeViewItemTable.swift */,
+				F13755C32C07FF300008DECC /* ViewTable */,
 				F1B689FE2C0630250033B159 /* EmployeeViewNewRecord.swift */,
 				F1B68A032C0630360033B159 /* EmployeeViewEditRecord.swift */,
 			);
@@ -186,6 +185,15 @@
 				D98748E62BF6734300DFAE63 /* ItemMenuView.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		F13755C32C07FF300008DECC /* ViewTable */ = {
+			isa = PBXGroup;
+			children = (
+				D98748F12BF67ED200DFAE63 /* EmployeeViewTable.swift */,
+				F1B689E92C0617C80033B159 /* EmployeeViewItemTable.swift */,
+			);
+			path = ViewTable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

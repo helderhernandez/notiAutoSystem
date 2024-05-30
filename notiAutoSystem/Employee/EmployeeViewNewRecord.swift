@@ -16,64 +16,81 @@ struct EmployeeFormNewRecord {
 }
 
 struct EmployeeViewNewRecord: View {
-    @State private var employee = EmployeeFormNewRecord(
-            name: "John Doe",
-            dui: "0502393-7",
-            phone: "2255-8899",
-            address: "San Francisco, Palo Alto Home #4",
-            skills: ["Experto en motores", "Experto en cajas"]
+    @State private var employeeForm = EmployeeFormNewRecord(
+            name: "",
+            dui: "",
+            phone: "",
+            address: "",
+            skills: []
     )
     
     
-    @ObservedObject var employeeService: EmployeeService
+    var employeeService: EmployeeService = EmployeeService()
+    
+    @Environment(\.presentationMode) var presentationMode
+    
+    @State var newSkill : String = ""
+    
+    @State var invalidForm : Bool = false
     
     var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("Información del empleado")) {
-                    TextField("Nombre", text: $employee.name)
-                    TextField("DUI", text: $employee.dui)
-                    TextField("Celular", text: $employee.phone)
-                    TextField("Dirección", text: $employee.address)
+        Form {
+            
+            if(invalidForm){
+                Text("Formulario invalido, se requiere por lo menos un nombre")
+            }
+            
+            Section(header: Text("Información del empleado")) {
+                TextField("Nombre", text: $employeeForm.name)
+                TextField("DUI", text: $employeeForm.dui)
+                TextField("Celular", text: $employeeForm.phone)
+                TextField("Dirección", text: $employeeForm.address)
+            }
+            
+            Section(header: Text("Skills")) {
+                
+                ForEach(employeeForm.skills.indices, id: \.self) { index in
+                    TextField("Skill \(index + 1)", text: $employeeForm.skills[index])
                 }
                 
-                Section(header: Text("Skills")) {
-                    /*
-                    ForEach($employee.skills.indices, id: \.self) { index in
-                        TextField("Skill \(index + 1)", text: $employee.skills[index])
-                    }
- */
-                    Button(action: {
-                        employee.skills.append("")
-                    }) {
-                        Text("Agregar Skill")
-                    }
-                }
-                
+                TextField("Experto en aceite", text: $newSkill)
+
                 Button(action: {
-                    let new = EmployeeModel(
-                        name: employee.name,
-                        dui: employee.dui,
-                        phone: employee.phone,
-                        address: employee.address,
-                        skills: employee.skills
-                    )
-                    
-                    employeeService.create(employee: new)
-                    
-                    // mostrar un popup
-                    // regresar a la vista de empleados
+                    employeeForm.skills.append(newSkill)
+                    newSkill = ""
                 }) {
-                    Text("Guardar")
+                    Text("Push Skill")
                 }
             }
-            .navigationBarTitle("Nuevo empleado")
+            
+            Button(action: {
+                if(employeeForm.name == ""){
+                    invalidForm = true;
+                    
+                    // cerramos el mensaje de error luego de un tiempo
+                    _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
+                        invalidForm = false;
+                    }
+
+                    return;
+                }
+                
+                invalidForm = false;
+                employeeService.create(employeeForm: employeeForm) // save in firestore
+                self.presentationMode.wrappedValue.dismiss() // close view
+            }) {
+                Text("Guardar")
+            }
         }
+        //.navigationTitle("Registrar")
+        //.navigationBarTitleDisplayMode(.inline)
+        //.navigationBarHidden(false)
+        .navigationBarTitle("Crear Empleado", displayMode:.inline)
     }
 }
 
 struct EmployeeViewNewRecord_Previews: PreviewProvider {
     static var previews: some View {
-        EmployeeViewNewRecord(employeeService: EmployeeService())
+        EmployeeViewNewRecord()
     }
 }

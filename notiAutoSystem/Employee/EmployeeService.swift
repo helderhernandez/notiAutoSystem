@@ -30,21 +30,21 @@ final class EmployeeService: ObservableObject {
     }
     
    
-    func create(employee: EmployeeModel) {
+    func create(employeeForm: EmployeeFormNewRecord) {
         // no include id-document (generate by firebase)
         let newEmployee = EmployeeModel(
-            name: employee.name,
-            dui: employee.dui,
-            phone: employee.phone,
-            address: employee.address,
-            skills: employee.skills
+            name: employeeForm.name,
+            dui: employeeForm.dui,
+            phone: employeeForm.phone,
+            address: employeeForm.address,
+            skills: employeeForm.skills
         )
 
         employeeRepository.create(employee: newEmployee)
     }
     
     func update(employee: EmployeeModel) {
-        let newEmployee = EmployeeModel(
+        let upEmployee = EmployeeModel(
             id: employee.id,
             name: employee.name,
             dui: employee.dui,
@@ -53,7 +53,7 @@ final class EmployeeService: ObservableObject {
             skills: employee.skills
         )
 
-        employeeRepository.update(employee: employee)
+        employeeRepository.update(employee: upEmployee)
     }
     
     func delete(employee: EmployeeModel) {
