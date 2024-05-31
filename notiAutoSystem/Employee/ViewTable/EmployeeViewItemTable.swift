@@ -23,15 +23,17 @@ struct EmployeeViewItemTable: View {
 
 struct EmployeeViewItemTable_Previews: PreviewProvider {
     static var previews: some View {
+        let employeeExample = EmployeeModel(
+            id: "0001",
+            name: "Maraleni Diaz",
+            dui: "05023937-7",
+            phone: "2282-4545",
+            address: "Mejicanos, col. Buena Vista",
+            skills: ["Torno", "Enderazado y pintura", "Electromecanico"]
+        )
+        
         EmployeeViewItemTable(
-            employee: EmployeeModel(
-                id: "0001",
-                name: "Maraleni Diaz",
-                dui: "05023937-7",
-                phone: "2282-4545",
-                address: "Mejicanos, col. Buena Vista",
-                skills: ["Torno", "Enderazado y pintura", "Electromecanico"]
-            )
+            employee: employeeExample
         )
     }
 }

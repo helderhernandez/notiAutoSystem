@@ -21,10 +21,6 @@ struct MenuView: View {
                 }
                 
                 NavigationLink(destination: Text("En construccion")){
-                    ItemMenuView(iconMenu: "doc.text.fill", labelMenu: "Facturación", descriptionMenu: "Menu facturas comerciales")
-                }
-                
-                NavigationLink(destination: Text("En construccion")){
                     ItemMenuView(iconMenu: "car.fill", labelMenu: "Mantenimiento", descriptionMenu: "Menu de mantenimiento de vehiculos")
                 }
                 
@@ -32,7 +28,10 @@ struct MenuView: View {
                     ItemMenuView(iconMenu: "table.fill", labelMenu: "Productos y Servicios", descriptionMenu: "Catalogo de productos y servios")
                 }
             }.navigationTitle("Noti Auto System")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(false)
         }
+        .navigationViewStyle(StackNavigationViewStyle()) // importante para no regresar el root al hacer el dismiss()
         
     }
 }

@@ -26,6 +26,13 @@
 		F14210062C04E1F1003CCC91 /* EmployeeFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14210052C04E1F1003CCC91 /* EmployeeFirestore.swift */; };
 		F142100B2C04E4B9003CCC91 /* EmployeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142100A2C04E4B9003CCC91 /* EmployeeRepository.swift */; };
 		F14210102C04E5DA003CCC91 /* EmployeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142100F2C04E5DA003CCC91 /* EmployeeService.swift */; };
+		F161E93F2C09501100819559 /* ClientFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161E93E2C09501100819559 /* ClientFirestore.swift */; };
+		F161E9442C09502400819559 /* ClientRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161E9432C09502400819559 /* ClientRepository.swift */; };
+		F161E9572C09507E00819559 /* ClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161E9562C09507E00819559 /* ClientService.swift */; };
+		F161E95F2C09509D00819559 /* ClientViewTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161E95E2C09509D00819559 /* ClientViewTable.swift */; };
+		F161E9672C0950AE00819559 /* ClientViewItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161E9662C0950AE00819559 /* ClientViewItemTable.swift */; };
+		F161E96C2C0950C300819559 /* ClientViewNewRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161E96B2C0950C300819559 /* ClientViewNewRecord.swift */; };
+		F161E9712C0950D600819559 /* ClientViewEditRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161E9702C0950D600819559 /* ClientViewEditRecord.swift */; };
 		F1B689EA2C0617C80033B159 /* EmployeeViewItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B689E92C0617C80033B159 /* EmployeeViewItemTable.swift */; };
 		F1B689FF2C0630250033B159 /* EmployeeViewNewRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B689FE2C0630250033B159 /* EmployeeViewNewRecord.swift */; };
 		F1B68A042C0630360033B159 /* EmployeeViewEditRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B68A032C0630360033B159 /* EmployeeViewEditRecord.swift */; };
@@ -68,6 +75,13 @@
 		F14210052C04E1F1003CCC91 /* EmployeeFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeFirestore.swift; sourceTree = "<group>"; };
 		F142100A2C04E4B9003CCC91 /* EmployeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepository.swift; sourceTree = "<group>"; };
 		F142100F2C04E5DA003CCC91 /* EmployeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeService.swift; sourceTree = "<group>"; };
+		F161E93E2C09501100819559 /* ClientFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientFirestore.swift; sourceTree = "<group>"; };
+		F161E9432C09502400819559 /* ClientRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRepository.swift; sourceTree = "<group>"; };
+		F161E9562C09507E00819559 /* ClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientService.swift; sourceTree = "<group>"; };
+		F161E95E2C09509D00819559 /* ClientViewTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewTable.swift; sourceTree = "<group>"; };
+		F161E9662C0950AE00819559 /* ClientViewItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewItemTable.swift; sourceTree = "<group>"; };
+		F161E96B2C0950C300819559 /* ClientViewNewRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewNewRecord.swift; sourceTree = "<group>"; };
+		F161E9702C0950D600819559 /* ClientViewEditRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewEditRecord.swift; sourceTree = "<group>"; };
 		F1B689E92C0617C80033B159 /* EmployeeViewItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewItemTable.swift; sourceTree = "<group>"; };
 		F1B689FE2C0630250033B159 /* EmployeeViewNewRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewNewRecord.swift; sourceTree = "<group>"; };
 		F1B68A032C0630360033B159 /* EmployeeViewEditRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewEditRecord.swift; sourceTree = "<group>"; };
@@ -171,10 +185,10 @@
 				F14210052C04E1F1003CCC91 /* EmployeeFirestore.swift */,
 				F142100A2C04E4B9003CCC91 /* EmployeeRepository.swift */,
 				F142100F2C04E5DA003CCC91 /* EmployeeService.swift */,
-				D98748F12BF67ED200DFAE63 /* EmployeeViewTable.swift */,
-				F1B689E92C0617C80033B159 /* EmployeeViewItemTable.swift */,
+				F13755C32C07FF300008DECC /* ViewTable */,
 				F1B689FE2C0630250033B159 /* EmployeeViewNewRecord.swift */,
 				F1B68A032C0630360033B159 /* EmployeeViewEditRecord.swift */,
+				F161E93D2C094FEB00819559 /* Clients */,
 			);
 			path = Employee;
 			sourceTree = "<group>";
@@ -186,6 +200,37 @@
 				D98748E62BF6734300DFAE63 /* ItemMenuView.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		F13755C32C07FF300008DECC /* ViewTable */ = {
+			isa = PBXGroup;
+			children = (
+				D98748F12BF67ED200DFAE63 /* EmployeeViewTable.swift */,
+				F1B689E92C0617C80033B159 /* EmployeeViewItemTable.swift */,
+			);
+			path = ViewTable;
+			sourceTree = "<group>";
+		};
+		F161E93D2C094FEB00819559 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				F161E93E2C09501100819559 /* ClientFirestore.swift */,
+				F161E9432C09502400819559 /* ClientRepository.swift */,
+				F161E9562C09507E00819559 /* ClientService.swift */,
+				F161E94A2C09503B00819559 /* ClientViewTable */,
+				F161E96B2C0950C300819559 /* ClientViewNewRecord.swift */,
+				F161E9702C0950D600819559 /* ClientViewEditRecord.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		F161E94A2C09503B00819559 /* ClientViewTable */ = {
+			isa = PBXGroup;
+			children = (
+				F161E95E2C09509D00819559 /* ClientViewTable.swift */,
+				F161E9662C0950AE00819559 /* ClientViewItemTable.swift */,
+			);
+			path = ClientViewTable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,13 +378,20 @@
 				D98748F22BF67ED200DFAE63 /* EmployeeViewTable.swift in Sources */,
 				F14210102C04E5DA003CCC91 /* EmployeeService.swift in Sources */,
 				D98748DF2BF66F7F00DFAE63 /* MenuView.swift in Sources */,
+				F161E9712C0950D600819559 /* ClientViewEditRecord.swift in Sources */,
 				F1B689FF2C0630250033B159 /* EmployeeViewNewRecord.swift in Sources */,
+				F161E9672C0950AE00819559 /* ClientViewItemTable.swift in Sources */,
 				F142100B2C04E4B9003CCC91 /* EmployeeRepository.swift in Sources */,
+				F161E93F2C09501100819559 /* ClientFirestore.swift in Sources */,
+				F161E95F2C09509D00819559 /* ClientViewTable.swift in Sources */,
 				0CB9AB522BE6DDCF00299A6B /* ContentView.swift in Sources */,
+				F161E9442C09502400819559 /* ClientRepository.swift in Sources */,
 				D98748E72BF6734300DFAE63 /* ItemMenuView.swift in Sources */,
 				0CB9AB502BE6DDCF00299A6B /* notiAutoSystemApp.swift in Sources */,
 				F14210062C04E1F1003CCC91 /* EmployeeFirestore.swift in Sources */,
 				F1B68A042C0630360033B159 /* EmployeeViewEditRecord.swift in Sources */,
+				F161E9572C09507E00819559 /* ClientService.swift in Sources */,
+				F161E96C2C0950C300819559 /* ClientViewNewRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

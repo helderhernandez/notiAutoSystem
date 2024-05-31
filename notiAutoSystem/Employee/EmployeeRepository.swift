@@ -19,28 +19,16 @@ final class EmployeeRepository {
         employeeFirestore.getAll(completionBlock: completionBlock)
     }
     
-    /*
-    func createNewLink(withURL url: String, completionBlock: @escaping (Result<LinkModel, Error>) -> Void) {
-        
-        //metadataDatasource.getMetadata(fromURL: url, completionBlock: completionBlock)
-        
-        metadataDatasource.getMetadata(fromURL: url) { [weak self] result in
-            switch result {
-            case .success(let linkModel):
-                self?.linkDatasource.createNew(link: linkModel,
-                                               completionBlock: completionBlock)
-            case .failure(let error):
-                completionBlock(.failure(error))
-            }
-        }
+    func create(employee: EmployeeModel) {
+        employeeFirestore.create(employee: employee)
     }
     
-    func update(link: LinkModel) {
-        linkDatasource.update(link: link)
+    func update(employee: EmployeeModel) {
+        employeeFirestore.update(employee: employee)
     }
     
-    func delete(link: LinkModel) {
-        linkDatasource.delete(link: link)
+    func delete(employeeDocumentId: String) {
+        employeeFirestore.delete(employeeDocumentId: employeeDocumentId)
     }
- */
+
 }

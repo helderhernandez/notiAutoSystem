@@ -52,34 +52,32 @@ final class EmployeeFirestore {
             }
     }
     
-    /*
-    func createNew(link: LinkModel, completionBlock: @escaping (Result<LinkModel, Error>) -> Void) {
+    
+    func create(employee: EmployeeModel) {
         do {
-            _ = try database.collection(collection).addDocument(from: link)
-            completionBlock(.success(link))
+            // aca guardamos la informacion en firebase
+            _ = try database.collection(EMPLOYEE_COLLECTION).addDocument(from: employee)
         } catch {
-            completionBlock(.failure(error))
+            print("Error creating employee in firebase")
         }
     }
     
-    func update(link: LinkModel) {
+    
+    func update(employee: EmployeeModel) {
         // obtenemos el document ID (que es generado por firebase)
-        guard let documentId = link.id else {
+        guard let documentId = employee.id else {
             return
         }
+
         do {
             // aca actualizamos la informacion en firebase
-            _ = try database.collection(collection).document(documentId).setData(from: link)
+            _ = try database.collection(EMPLOYEE_COLLECTION).document(documentId).setData(from: employee)
         } catch {
-            print("Error updating link in our database")
+            print("Error updating employee in firebase")
         }
     }
     
-    func delete(link: LinkModel) {
-        guard let documentId = link.id else {
-            return
-        }
-        database.collection(collection).document(documentId).delete()
+    func delete(employeeDocumentId: String) {
+        database.collection(EMPLOYEE_COLLECTION).document(employeeDocumentId).delete()
     }
- */
 }
