@@ -8,8 +8,36 @@
 import SwiftUI
 
 struct ClientViewTable: View {
+    @ObservedObject var clientService: ClientService = ClientService()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        // listado
+        List {
+            ForEach(clientService.clients) { client in
+                VStack {
+                    NavigationLink(
+                        // edit view
+                        destination: ClientViewEditRecord(
+                            clientModel: client
+                        )
+                    ){
+                        ClientViewItemTable(client: client)
+                    }
+                    .padding()
+                }
+            }
+        }
+        .onAppear() {
+            clientService.getAll()
+        }
+        .navigationBarTitle("Clientes", displayMode:.inline)
+        .toolbar {
+            NavigationLink(
+                destination: ClientViewNewRecord(clientService: clientService)
+            ){
+                Text("➕")
+            }
+        }
     }
 }
 
