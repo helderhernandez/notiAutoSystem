@@ -36,10 +36,6 @@ struct EmployeeViewNewRecord: View {
     var body: some View {
         Form {
             
-            if(invalidForm){
-                Text("Formulario invalido, se requiere por lo menos un nombre")
-            }
-            
             Section(header: Text("Información del empleado")) {
                 TextField("Nombre", text: $employeeForm.name)
                 TextField("DUI", text: $employeeForm.dui)
@@ -53,7 +49,7 @@ struct EmployeeViewNewRecord: View {
                     TextField("Skill \(index + 1)", text: $employeeForm.skills[index])
                 }
                 
-                TextField("Experto en aceite", text: $newSkill)
+                TextField("e.g: Experto en aceite", text: $newSkill)
 
                 Button(action: {
                     employeeForm.skills.append(newSkill)
@@ -63,20 +59,27 @@ struct EmployeeViewNewRecord: View {
                 }
             }
             
+            if(invalidForm){
+                Text("Formulario invalido, se requiere por lo menos un nombre")
+            }
+            
             Button(action: {
                 if(employeeForm.name == ""){
                     invalidForm = true;
                     
                     // cerramos el mensaje de error luego de un tiempo
-                    _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
+                    _ = Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                         invalidForm = false;
                     }
 
                     return;
                 }
                 
-                invalidForm = false;
-                employeeService.create(employeeForm: employeeForm) // save in firestore
+                invalidForm = false; // clean error
+                
+                // save in firestore
+                employeeService.create(employeeForm: employeeForm)
+                
                 self.presentationMode.wrappedValue.dismiss() // close view
             }) {
                 Text("Guardar")

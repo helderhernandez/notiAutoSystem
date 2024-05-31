@@ -43,14 +43,14 @@ final class EmployeeService: ObservableObject {
         employeeRepository.create(employee: newEmployee)
     }
     
-    func update(employee: EmployeeModel) {
+    func update(employeeDocumentId: String, employeeForm: EmployeeFormEditRecord) {
         let upEmployee = EmployeeModel(
-            id: employee.id,
-            name: employee.name,
-            dui: employee.dui,
-            phone: employee.phone,
-            address: employee.address,
-            skills: employee.skills
+            id: employeeDocumentId,
+            name: employeeForm.name,
+            dui: employeeForm.dui,
+            phone: employeeForm.phone,
+            address: employeeForm.address,
+            skills: employeeForm.skills
         )
 
         employeeRepository.update(employee: upEmployee)

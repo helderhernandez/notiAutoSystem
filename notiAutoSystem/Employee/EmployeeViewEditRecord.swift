@@ -34,12 +34,14 @@ struct EmployeeViewEditRecord: View {
     
     @State var invalidForm : Bool = false
     
+    @State var newSkill : String = ""
+    
+    var employeeService: EmployeeService = EmployeeService()
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         Form {
-            
-            if(invalidForm){
-                Text("Formulario invalido, se requiere por lo menos un nombre")
-            }
             
             Section(header: Text("Información del empleado")) {
                 TextField("Nombre", text: $employeeForm.name)
@@ -48,14 +50,14 @@ struct EmployeeViewEditRecord: View {
                 TextField("Dirección", text: $employeeForm.address)
             }
             
-            /*
+            
             Section(header: Text("Skills")) {
                 
                 ForEach(employeeForm.skills.indices, id: \.self) { index in
                     TextField("Skill \(index + 1)", text: $employeeForm.skills[index])
                 }
                 
-                TextField("Experto en aceite", text: $newSkill)
+                TextField("e.g: Experto en aceite", text: $newSkill)
 
                 Button(action: {
                     employeeForm.skills.append(newSkill)
@@ -63,31 +65,37 @@ struct EmployeeViewEditRecord: View {
                 }) {
                     Text("Push Skill")
                 }
-            }*/
+            }
             
-            /*
+            if(invalidForm){
+                Text("Formulario invalido, se requiere por lo menos un nombre")
+            }
+            
             Button(action: {
                 if(employeeForm.name == ""){
                     invalidForm = true;
                     
                     // cerramos el mensaje de error luego de un tiempo
-                    _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
+                    _ = Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                         invalidForm = false;
                     }
 
                     return;
                 }
                 
-                invalidForm = false;
-                employeeService.create(employeeForm: employeeForm) // save in firestore
+                invalidForm = false; // clean error
+                
+                // update in firestore
+                employeeService.update(
+                    employeeDocumentId: employeeDocumentId,
+                    employeeForm: employeeForm
+                )
+                
                 self.presentationMode.wrappedValue.dismiss() // close view
             }) {
-                Text("Guardar")
-            }*/
+                Text("Actualizar")
+            }
         }
-        //.navigationTitle("Registrar")
-        //.navigationBarTitleDisplayMode(.inline)
-        //.navigationBarHidden(false)
         .navigationBarTitle("Editar Empleado", displayMode:.inline)
         /*
         VStack{
