@@ -7,20 +7,11 @@
 
 import SwiftUI
 
-struct VehicleFormNew {
-    var brand: String
-    var model: String
-    var logo: String
-    var chassisNumber: String
-    var yearManufacture: Int
-}
-
 struct ClientFormNewRecord {
     var name: String
     var dui: String
     var phone: String
     var address: String
-    var vehicles: [VehicleFormNew]
 }
 
 struct ClientViewNewRecord: View {
@@ -28,22 +19,12 @@ struct ClientViewNewRecord: View {
             name: "",
             dui: "",
             phone: "",
-            address: "",
-            vehicles: []
+            address: ""
     )
-    
-    
+        
     var clientService: ClientService = ClientService()
     
     @Environment(\.presentationMode) var presentationMode
-    
-    @State var newVehicle : VehicleFormNew = VehicleFormNew( 
-                brand: "",
-                model:"",
-                logo:"",
-                chassisNumber:"",
-                yearManufacture: 2000
-            )
     
     @State var invalidForm : Bool = false
     
@@ -56,24 +37,6 @@ struct ClientViewNewRecord: View {
                 TextField("Celular", text: $clientForm.phone)
                 TextField("Dirección", text: $clientForm.address)
             }
-            
-            /*
-            Section(header: Text("Skills")) {
-                
-                ForEach(clientForm.vehicles.indices, id: \.self) { index in
-                    TextField("Skill \(index + 1)", text: $clientForm.vehicles[index])
-                }
-                
-                TextField("e.g: Experto en aceite", text: $newVehicle)
-
-                Button(action: {
-                    clientForm.vehicles.append(newVehicle)
-                    newVehicle = ""
-                }) {
-                    Text("➕ Push Skill")
-                }
-            }
-            */
             
             if(invalidForm){
                 Text("Formulario invalido, se requiere por lo menos un nombre")

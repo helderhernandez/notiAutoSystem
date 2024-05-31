@@ -16,7 +16,6 @@ struct ClientViewItemTable: View {
             Text(client.name).font(.title)
             Text("💳 DUI: \(client.dui)").font(.subheadline)
             Divider()
-            //Text("🛠 Skills: \(client.skills.joined(separator: ", "))")
         }
     }
 }
@@ -28,17 +27,7 @@ struct ClientViewItemTable_Previews: PreviewProvider {
             name: "Maraleni Diaz",
             dui: "05023937-7",
             phone: "2282-4545",
-            address: "Mejicanos, col. Buena Vista",
-            vehicles: []
-            /*[
-                VehicleModel( 
-                    brand: "TOYOTA",
-                    model:"yaris",
-                    logo:"toyota",
-                    chassisNumber:"456789456",
-                    yearManufacture: 2012
-                )
-            ]*/
+            address: "Mejicanos, col. Buena Vista"
         )
         
         ClientViewItemTable(

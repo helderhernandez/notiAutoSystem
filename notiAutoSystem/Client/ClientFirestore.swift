@@ -10,14 +10,6 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-struct VehicleModel: Decodable, Encodable {
-    var brand: String
-    var model: String
-    var logo: String
-    var chassisNumber: String
-    var yearManufacture: Int
-}
-
 struct ClientModel: Decodable, Identifiable, Encodable {
     // @DocumentID es un property wrapper
     @DocumentID var id: String?
@@ -26,7 +18,6 @@ struct ClientModel: Decodable, Identifiable, Encodable {
     let dui: String
     let phone: String
     let address: String
-    let vehicles: [VehicleModel]
 }
 
 final class ClientFirestore {

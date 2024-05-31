@@ -7,20 +7,11 @@
 
 import SwiftUI
 
-struct VehicleFormEdit {
-    var brand: String
-    var model: String
-    var logo: String
-    var chassisNumber: String
-    var yearManufacture: Int
-}
-
 struct ClientFormEditRecord {
     var name: String
     var dui: String
     var phone: String
     var address: String
-    var vehicles: [VehicleFormEdit]
 }
 
 struct ClientViewEditRecord: View {
@@ -35,20 +26,11 @@ struct ClientViewEditRecord: View {
             name: clientModel.name,
             dui: clientModel.dui,
             phone: clientModel.phone,
-            address: clientModel.address,
-            vehicles: [] //clientModel.vehicles
+            address: clientModel.address
         ))
     }
     
     @State var invalidForm : Bool = false
-    
-    @State var newVehicle : VehicleFormNew = VehicleFormNew( 
-                brand: "",
-                model:"",
-                logo:"",
-                chassisNumber:"",
-                yearManufacture: 2000
-            )
     
     var clientService: ClientService = ClientService()
     
@@ -63,24 +45,6 @@ struct ClientViewEditRecord: View {
                 TextField("Celular", text: $clientForm.phone)
                 TextField("Dirección", text: $clientForm.address)
             }
-            
-            
-            /*
-            Section(header: Text("Skills")) {
-                
-                ForEach(clientForm.vehicles.indices, id: \.self) { index in
-                    TextField("Skill \(index + 1)", text: $clientForm.vehicles[index])
-                }
-                
-                TextField("e.g: Experto en aceite", text: $newSkill)
-
-                Button(action: {
-                    clientForm.vehicles.append(newSkill)
-                    newSkill = ""
-                }) {
-                    Text("➕ Push Skill")
-                }
-            }*/
             
             if(invalidForm){
                 Text("Formulario invalido, se requiere por lo menos un nombre")
@@ -131,17 +95,7 @@ struct ClientViewEditRecord_Previews: PreviewProvider {
             name: "Maraleni Diaz",
             dui: "05023937-7",
             phone: "2282-4545",
-            address: "Mejicanos, col. Buena Vista",
-            vehicles: []
-            /*[
-                VehicleModel( 
-                    brand: "TOYOTA",
-                    model:"yaris",
-                    logo:"toyota",
-                    chassisNumber:"456789456",
-                    yearManufacture: 2012
-                )
-            ]*/
+            address: "Mejicanos, col. Buena Vista"
         )
         
         ClientViewEditRecord(clientModel: clientExample)

@@ -36,6 +36,7 @@
 		F1B689EA2C0617C80033B159 /* EmployeeViewItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B689E92C0617C80033B159 /* EmployeeViewItemTable.swift */; };
 		F1B689FF2C0630250033B159 /* EmployeeViewNewRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B689FE2C0630250033B159 /* EmployeeViewNewRecord.swift */; };
 		F1B68A042C0630360033B159 /* EmployeeViewEditRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B68A032C0630360033B159 /* EmployeeViewEditRecord.swift */; };
+		F1C2916A2C0A88C100C581CC /* VehicleModelTest.txt in Resources */ = {isa = PBXBuildFile; fileRef = F1C291692C0A88C100C581CC /* VehicleModelTest.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		F1B689E92C0617C80033B159 /* EmployeeViewItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewItemTable.swift; sourceTree = "<group>"; };
 		F1B689FE2C0630250033B159 /* EmployeeViewNewRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewNewRecord.swift; sourceTree = "<group>"; };
 		F1B68A032C0630360033B159 /* EmployeeViewEditRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewEditRecord.swift; sourceTree = "<group>"; };
+		F1C291692C0A88C100C581CC /* VehicleModelTest.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = VehicleModelTest.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 				F161E94A2C09503B00819559 /* ClientViewTable */,
 				F161E96B2C0950C300819559 /* ClientViewNewRecord.swift */,
 				F161E9702C0950D600819559 /* ClientViewEditRecord.swift */,
+				F1C291692C0A88C100C581CC /* VehicleModelTest.txt */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				0CB9AB572BE6DDD100299A6B /* Preview Assets.xcassets in Resources */,
 				0CB9AB542BE6DDD100299A6B /* Assets.xcassets in Resources */,
 				F1420FF12C04DAE4003CCC91 /* GoogleService-Info.plist in Resources */,
+				F1C2916A2C0A88C100C581CC /* VehicleModelTest.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
