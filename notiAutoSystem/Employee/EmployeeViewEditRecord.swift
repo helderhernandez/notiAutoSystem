@@ -63,7 +63,7 @@ struct EmployeeViewEditRecord: View {
                     employeeForm.skills.append(newSkill)
                     newSkill = ""
                 }) {
-                    Text("Push Skill")
+                    Text("➕ Push Skill")
                 }
             }
             
@@ -93,17 +93,19 @@ struct EmployeeViewEditRecord: View {
                 
                 self.presentationMode.wrappedValue.dismiss() // close view
             }) {
-                Text("Actualizar")
+                Text("✅ Actualizar")
+            }
+            
+            Button(action: {             
+                // delete in firestore
+                employeeService.delete(employeeDocumentId: employeeDocumentId)
+                
+                self.presentationMode.wrappedValue.dismiss() // close view
+            }) {
+                Text("🗑 Eliminar").foregroundColor(.red)
             }
         }
         .navigationBarTitle("Editar Empleado", displayMode:.inline)
-        /*
-        VStack{
-            Text(employeeDocumentId)
-            Text(employeeForm.name)
-            Text(employeeForm.address)
-            Text(employeeForm.skills.joined(separator: ", "))
-        }*/
     }
 }
 

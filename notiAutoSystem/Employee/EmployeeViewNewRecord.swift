@@ -55,7 +55,7 @@ struct EmployeeViewNewRecord: View {
                     employeeForm.skills.append(newSkill)
                     newSkill = ""
                 }) {
-                    Text("Push Skill")
+                    Text("➕ Push Skill")
                 }
             }
             
@@ -82,7 +82,7 @@ struct EmployeeViewNewRecord: View {
                 
                 self.presentationMode.wrappedValue.dismiss() // close view
             }) {
-                Text("Guardar")
+                Text("✅ Guardar")
             }
         }
         //.navigationTitle("Registrar")

@@ -27,8 +27,8 @@ final class EmployeeRepository {
         employeeFirestore.update(employee: employee)
     }
     
-    func delete(employee: EmployeeModel) {
-        employeeFirestore.delete(employee: employee)
+    func delete(employeeDocumentId: String) {
+        employeeFirestore.delete(employeeDocumentId: employeeDocumentId)
     }
 
 }

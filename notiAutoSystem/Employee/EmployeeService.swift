@@ -44,7 +44,7 @@ final class EmployeeService: ObservableObject {
     }
     
     func update(employeeDocumentId: String, employeeForm: EmployeeFormEditRecord) {
-        let upEmployee = EmployeeModel(
+        let editEmployee = EmployeeModel(
             id: employeeDocumentId,
             name: employeeForm.name,
             dui: employeeForm.dui,
@@ -53,11 +53,11 @@ final class EmployeeService: ObservableObject {
             skills: employeeForm.skills
         )
 
-        employeeRepository.update(employee: upEmployee)
+        employeeRepository.update(employee: editEmployee)
     }
     
-    func delete(employee: EmployeeModel) {
-        employeeRepository.delete(employee: employee)
+    func delete(employeeDocumentId: String) {
+        employeeRepository.delete(employeeDocumentId: employeeDocumentId)
     }
 
 }

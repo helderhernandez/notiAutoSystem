@@ -77,12 +77,7 @@ final class EmployeeFirestore {
         }
     }
     
-    func delete(employee: EmployeeModel) {
-        // obtenemos el document ID (que es generado por firebase)
-        guard let documentId = employee.id else {
-            return
-        }
-
-        database.collection(EMPLOYEE_COLLECTION).document(documentId).delete()
+    func delete(employeeDocumentId: String) {
+        database.collection(EMPLOYEE_COLLECTION).document(employeeDocumentId).delete()
     }
 }
