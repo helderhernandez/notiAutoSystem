@@ -29,7 +29,8 @@ struct ClientViewItemTable_Previews: PreviewProvider {
             dui: "05023937-7",
             phone: "2282-4545",
             address: "Mejicanos, col. Buena Vista",
-            vehicles: [
+            vehicles: []
+            /*[
                 VehicleModel( 
                     brand: "TOYOTA",
                     model:"yaris",
@@ -37,7 +38,7 @@ struct ClientViewItemTable_Previews: PreviewProvider {
                     chassisNumber:"456789456",
                     yearManufacture: 2012
                 )
-            ]
+            ]*/
         )
         
         ClientViewItemTable(

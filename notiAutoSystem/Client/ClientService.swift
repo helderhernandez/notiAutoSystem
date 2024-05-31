@@ -37,7 +37,7 @@ final class ClientService: ObservableObject {
             dui: clientForm.dui,
             phone: clientForm.phone,
             address: clientForm.address,
-            vehicles: clientForm.vehicles
+            vehicles: [] //clientForm.vehicles
         )
 
         clientRepository.create(client: newRecord)
@@ -50,7 +50,7 @@ final class ClientService: ObservableObject {
             dui: clientForm.dui,
             phone: clientForm.phone,
             address: clientForm.address,
-            vehicles: clientForm.vehicles
+            vehicles: [] //clientForm.vehicles
         )
 
         clientRepository.update(client: editRecord)

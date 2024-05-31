@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VehicleFormEdit: Decodable, Encodable {
+struct VehicleFormEdit {
     var brand: String
     var model: String
     var logo: String
@@ -132,7 +132,8 @@ struct ClientViewEditRecord_Previews: PreviewProvider {
             dui: "05023937-7",
             phone: "2282-4545",
             address: "Mejicanos, col. Buena Vista",
-            vehicles: [
+            vehicles: []
+            /*[
                 VehicleModel( 
                     brand: "TOYOTA",
                     model:"yaris",
@@ -140,7 +141,7 @@ struct ClientViewEditRecord_Previews: PreviewProvider {
                     chassisNumber:"456789456",
                     yearManufacture: 2012
                 )
-            ]
+            ]*/
         )
         
         ClientViewEditRecord(clientModel: clientExample)

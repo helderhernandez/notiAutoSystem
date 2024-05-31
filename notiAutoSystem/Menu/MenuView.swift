@@ -12,7 +12,7 @@ struct MenuView: View {
         
         NavigationView{
             List {
-                NavigationLink(destination: Text("En construccion")){
+                NavigationLink(destination: ClientViewTable()){
                     ItemMenuView(iconMenu: "person.fill", labelMenu: "Clientes", descriptionMenu: "Menu de clientes y sus vehiculos")
                 }
                 

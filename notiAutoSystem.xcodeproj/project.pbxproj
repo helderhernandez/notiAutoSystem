@@ -147,6 +147,7 @@
 				F1420FF02C04DAE4003CCC91 /* GoogleService-Info.plist */,
 				D98748DD2BF66F6300DFAE63 /* Menu */,
 				D98748D92BF66F2500DFAE63 /* Employee */,
+				F161E93D2C094FEB00819559 /* Client */,
 				0CB9AB532BE6DDD100299A6B /* Assets.xcassets */,
 				0CB9AB552BE6DDD100299A6B /* Preview Content */,
 			);
@@ -188,7 +189,6 @@
 				F13755C32C07FF300008DECC /* ViewTable */,
 				F1B689FE2C0630250033B159 /* EmployeeViewNewRecord.swift */,
 				F1B68A032C0630360033B159 /* EmployeeViewEditRecord.swift */,
-				F161E93D2C094FEB00819559 /* Clients */,
 			);
 			path = Employee;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 			path = ViewTable;
 			sourceTree = "<group>";
 		};
-		F161E93D2C094FEB00819559 /* Clients */ = {
+		F161E93D2C094FEB00819559 /* Client */ = {
 			isa = PBXGroup;
 			children = (
 				F161E93E2C09501100819559 /* ClientFirestore.swift */,
@@ -221,7 +221,7 @@
 				F161E96B2C0950C300819559 /* ClientViewNewRecord.swift */,
 				F161E9702C0950D600819559 /* ClientViewEditRecord.swift */,
 			);
-			path = Clients;
+			path = Client;
 			sourceTree = "<group>";
 		};
 		F161E94A2C09503B00819559 /* ClientViewTable */ = {

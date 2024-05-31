@@ -26,7 +26,7 @@ struct ClientModel: Decodable, Identifiable, Encodable {
     let dui: String
     let phone: String
     let address: String
-    let vehicles: [Vehicle]
+    let vehicles: [VehicleModel]
 }
 
 final class ClientFirestore {

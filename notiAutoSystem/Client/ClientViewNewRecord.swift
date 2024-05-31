@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VehicleFormNew: Decodable, Encodable {
+struct VehicleFormNew {
     var brand: String
     var model: String
     var logo: String
