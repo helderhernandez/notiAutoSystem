@@ -8,13 +8,29 @@
 import SwiftUI
 
 struct PSViewItemTable: View {
+    var productService: ProductServiceModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       
+        VStack(alignment: .leading){
+            Text(productService.description).font(.title)
+            Text("💳 TIPO: \(productService.type)").font(.subheadline)
+            Divider()
+        }
     }
 }
 
 struct PSViewItemTable_Previews: PreviewProvider {
     static var previews: some View {
-        PSViewItemTable()
+        let productServiceExample = ProductServiceModel(
+            id: "0001",
+            description: "Cambio de aceite y filtro",
+            pricing: 2.0,
+            type: "SERVICIO"
+        )
+        
+        PSViewItemTable(
+            productService: productServiceExample
+        )
     }
 }
