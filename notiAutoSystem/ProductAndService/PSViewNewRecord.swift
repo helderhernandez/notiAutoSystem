@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProductServcieFormNewRecord {
     var description: String
-    var pricing: String
+    var pricing: Double
     var type: String
 }
 
@@ -21,20 +21,35 @@ struct PSViewNewRecord: View {
     
     @State private var form = ProductServcieFormNewRecord(
             description: "",
-            pricing: "0.00",
+            pricing: 0.00,
             type: "PRODUCTO"
     )
     
     @State var invalidForm : Bool = false
     
+    // convert double to string (for handler into form)
+    @State var pricingString: String = String(0.0)
+    
     let types = ["PRODUCTO", "SERVICIO"]
+    
+    /*
+    let amountFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        //formatter.zeroSymbol = ""
+        return formatter
+     }()*/
     
     var body: some View {
         Form {
             
             Section(header: Text("Información del Producto/Servicio")) {
                 TextField("Descripción", text: $form.description)
-                TextField("Precio", text: $form.pricing)
+                TextField(
+                    "Precio",
+                    text: $pricingString
+                    //,formatter:amountFormatter
+                ).keyboardType(.decimalPad)
                 
                 
                 Picker("Tipo", selection: $form.type) {
@@ -63,6 +78,9 @@ struct PSViewNewRecord: View {
                 }
                 
                 invalidForm = false; // clean error
+                
+                // convert string to double
+                form.pricing = Double(pricingString)!
                 
                 // save in firestore
                 psService.create(productServiceForm: form)

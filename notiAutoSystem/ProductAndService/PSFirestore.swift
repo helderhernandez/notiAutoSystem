@@ -15,7 +15,7 @@ struct ProductServiceModel: Decodable, Identifiable, Encodable {
     @DocumentID var id: String?
     
     var description: String
-    var pricing: String
+    var pricing: Double
     var type: String
 }
 

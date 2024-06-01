@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProductServiceFormEditRecord {
     var description: String
-    var pricing: String
+    var pricing: Double
     var type: String
 }
 
@@ -27,6 +27,15 @@ struct PSViewEditRecord: View {
             pricing: productServiceModel.pricing,
             type: productServiceModel.type
         ))
+        /*
+        _pricingString = State(
+            initialValue: String(productServiceModel.pricing
+            ))*/
+        
+        // convert double to string (for handler into form)
+        _pricingString = State(
+            initialValue: String(productServiceModel.pricing)
+        )
     }
     
     @State var invalidForm : Bool = false
@@ -35,20 +44,26 @@ struct PSViewEditRecord: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    /*
     let amountFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.zeroSymbol = ""
+        formatter.numberStyle = .decimal
+        //formatter.zeroSymbol = ""
         return formatter
-     }()
+     }()*/
+    
+    @State var pricingString: String
     
     var body: some View {
         Form {
             
             Section(header: Text("Información del Producto/Servicio")) {
                 TextField("Descripción", text: $form.description)
-                TextField("Precio", text: $form.pricing)
-                          //, formatter:amountFormatter).keyboardType(.decimalPad)
+                TextField(
+                    "Precio",
+                    text: $pricingString
+                    //,formatter:amountFormatter
+                ).keyboardType(.decimalPad)
                 
                 Picker("Tipo", selection: $form.type) {
                     ForEach(types, id: \.self) { type in
@@ -75,6 +90,9 @@ struct PSViewEditRecord: View {
                 }
                 
                 invalidForm = false; // clean error
+                
+                // convert string to double
+                form.pricing = Double(pricingString)!
                 
                 // update in firestore
                 psService.update(
@@ -105,7 +123,7 @@ struct PSViewEditRecord_Previews: PreviewProvider {
         let productServiceExample = ProductServiceModel(
             id: "0001",
             description: "Cambio de aceite y filtro",
-            pricing: "1252.45",
+            pricing: 1252.45,
             type: "SERVICIO"
         )
         
