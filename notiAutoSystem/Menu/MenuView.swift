@@ -12,7 +12,7 @@ struct MenuView: View {
         
         NavigationView{
             List {
-                NavigationLink(destination: Text("En construccion")){
+                NavigationLink(destination: ClientViewTable()){
                     ItemMenuView(iconMenu: "person.fill", labelMenu: "Clientes", descriptionMenu: "Menu de clientes y sus vehiculos")
                 }
                 
@@ -24,7 +24,7 @@ struct MenuView: View {
                     ItemMenuView(iconMenu: "car.fill", labelMenu: "Mantenimiento", descriptionMenu: "Menu de mantenimiento de vehiculos")
                 }
                 
-                NavigationLink(destination: Text("En construccion")){
+                NavigationLink(destination: PSViewTable()){
                     ItemMenuView(iconMenu: "table.fill", labelMenu: "Productos y Servicios", descriptionMenu: "Catalogo de productos y servios")
                 }
             }.navigationTitle("Noti Auto System")

@@ -1,20 +1,20 @@
 //
-//  ClientViewNewRecord.swift
+//  MaintenanceViewTable.swift
 //  notiAutoSystem
 //
-//  Created by user215032 on 5/30/24.
+//  Created by user215032 on 6/1/24.
 //
 
 import SwiftUI
 
-struct ClientViewNewRecord: View {
+struct MaintenanceViewTable: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct ClientViewNewRecord_Previews: PreviewProvider {
+struct MaintenanceViewTable_Previews: PreviewProvider {
     static var previews: some View {
-        ClientViewNewRecord()
+        MaintenanceViewTable()
     }
 }

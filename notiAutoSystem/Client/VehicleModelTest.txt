@@ -1,0 +1,39 @@
+
+/*
+struct VehicleModel: Decodable, Encodable {
+    var brand: String
+    var model: String
+    var logo: String
+    var chassisNumber: String
+    var yearManufacture: Int
+}
+ */
+
+//,vehicles: []
+/*[
+    VehicleModel(
+        brand: "TOYOTA",
+        model:"yaris",
+        logo:"toyota",
+        chassisNumber:"456789456",
+        yearManufacture: 2012
+    )
+]*/
+
+/*
+ struct VehicleFormNew {
+     var brand: String
+     var model: String
+     var logo: String
+     var chassisNumber: String
+     var yearManufacture: Int
+ }
+ 
+ @State var newVehicle : VehicleFormNew = VehicleFormNew(
+             brand: "",
+             model:"",
+             logo:"",
+             chassisNumber:"",
+             yearManufacture: 2000
+         )
+ **/
