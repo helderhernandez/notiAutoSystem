@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ProductServcieFormNewRecord {
     var description: String
-    var pricing: Double
+    var pricing: String
     var type: String
 }
 
 struct PSViewNewRecord: View {
     @State private var form = ProductServcieFormNewRecord(
             description: "",
-            pricing: 0,
+            pricing: "0.00",
             type: "PRODUCTO"
     )
 
@@ -28,12 +28,20 @@ struct PSViewNewRecord: View {
     
     @State var invalidForm : Bool = false
     
+    let amountFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.zeroSymbol = ""
+        return formatter
+     }()
+    
     var body: some View {
         Form {
             
             Section(header: Text("Información del Producto/Servicio")) {
                 TextField("Descripción", text: $form.description)
-                TextField("Precio", value: $form.pricing, formatter: NumberFormatter.currency)
+                TextField("Precio", text: $form.pricing)
+                //, formatter:amountFormatter)                    .keyboardType(.decimalPad)
                 
                 Picker("Tipo", selection: $form.type) {
                     ForEach(types, id: \.self) { type in
@@ -48,7 +56,7 @@ struct PSViewNewRecord: View {
             }
             
             Button(action: {
-                if(form.description == "" || form.pricing == 0){
+                if(form.description == ""){
                     invalidForm = true;
                     
                     // cerramos el mensaje de error luego de un tiempo
@@ -62,7 +70,7 @@ struct PSViewNewRecord: View {
                 invalidForm = false; // clean error
                 
                 // save in firestore
-                psService.create(productoServicioForm: form)
+                psService.create(productServiceForm: form)
                 
                 self.presentationMode.wrappedValue.dismiss() // close view
             }) {

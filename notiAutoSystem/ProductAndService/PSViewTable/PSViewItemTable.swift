@@ -14,8 +14,9 @@ struct PSViewItemTable: View {
        
         VStack(alignment: .leading){
             Text(productService.description).font(.title)
-            Text("💳 TIPO: \(productService.type)").font(.subheadline)
+            Text("⚙️ TIPO: \(productService.type)").font(.subheadline)
             Divider()
+            Text("💲 PRECIO: \(productService.pricing)")
         }
     }
 }
@@ -25,7 +26,7 @@ struct PSViewItemTable_Previews: PreviewProvider {
         let productServiceExample = ProductServiceModel(
             id: "0001",
             description: "Cambio de aceite y filtro",
-            pricing: 2.0,
+            pricing: "2.45",
             type: "SERVICIO"
         )
         

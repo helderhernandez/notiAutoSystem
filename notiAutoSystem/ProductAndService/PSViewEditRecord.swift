@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ProductServiceFormEditRecord {
     var description: String
-    var pricing: Double
+    var pricing: String
     var type: String
 }
 
 struct PSViewEditRecord: View {
+    let types = ["PRODUCTO", "SERVICIO"]
    
     @State private var documentId: String
     
@@ -34,12 +35,20 @@ struct PSViewEditRecord: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    let amountFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.zeroSymbol = ""
+        return formatter
+     }()
+    
     var body: some View {
         Form {
             
             Section(header: Text("Información del Producto/Servicio")) {
                 TextField("Descripción", text: $form.description)
-                TextField("Precio", value: $form.pricing, formatter: NumberFormatter.currency)
+                TextField("Precio", text: $form.pricing)
+                          //, formatter:amountFormatter).keyboardType(.decimalPad)
                 
                 Picker("Tipo", selection: $form.type) {
                     ForEach(types, id: \.self) { type in
@@ -54,7 +63,7 @@ struct PSViewEditRecord: View {
             }
             
             Button(action: {
-                if(form.description == "" || form.pricing == 0){
+                if(form.description == ""){
                     invalidForm = true;
                     
                     // cerramos el mensaje de error luego de un tiempo
@@ -96,7 +105,7 @@ struct PSViewEditRecord_Previews: PreviewProvider {
         let productServiceExample = ProductServiceModel(
             id: "0001",
             description: "Cambio de aceite y filtro",
-            pricing: 2.0,
+            pricing: "1252.45",
             type: "SERVICIO"
         )
         
