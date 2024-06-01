@@ -14,26 +14,20 @@ struct ProductServcieFormNewRecord {
 }
 
 struct PSViewNewRecord: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
+    var psService: PSServcie = PSServcie()
+    
     @State private var form = ProductServcieFormNewRecord(
             description: "",
             pricing: "0.00",
             type: "PRODUCTO"
     )
-
-    let types = ["PRODUCTO", "SERVICIO"]
-        
-    var psService: PSServcie = PSServcie()
-    
-    @Environment(\.presentationMode) var presentationMode
     
     @State var invalidForm : Bool = false
     
-    let amountFormatter: NumberFormatter = {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.zeroSymbol = ""
-        return formatter
-     }()
+    let types = ["PRODUCTO", "SERVICIO"]
     
     var body: some View {
         Form {
@@ -41,7 +35,7 @@ struct PSViewNewRecord: View {
             Section(header: Text("Información del Producto/Servicio")) {
                 TextField("Descripción", text: $form.description)
                 TextField("Precio", text: $form.pricing)
-                //, formatter:amountFormatter)                    .keyboardType(.decimalPad)
+                
                 
                 Picker("Tipo", selection: $form.type) {
                     ForEach(types, id: \.self) { type in
@@ -56,6 +50,7 @@ struct PSViewNewRecord: View {
             }
             
             Button(action: {
+                
                 if(form.description == ""){
                     invalidForm = true;
                     

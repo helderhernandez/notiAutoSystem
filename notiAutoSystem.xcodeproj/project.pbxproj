@@ -16,6 +16,13 @@
 		D98748DF2BF66F7F00DFAE63 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98748DE2BF66F7F00DFAE63 /* MenuView.swift */; };
 		D98748E72BF6734300DFAE63 /* ItemMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98748E62BF6734300DFAE63 /* ItemMenuView.swift */; };
 		D98748F22BF67ED200DFAE63 /* EmployeeViewTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98748F12BF67ED200DFAE63 /* EmployeeViewTable.swift */; };
+		F117CEBE2C0B98660057D903 /* MaintenanceFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F117CEBD2C0B98660057D903 /* MaintenanceFirestore.swift */; };
+		F117CEC32C0B98810057D903 /* MaintenanceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F117CEC22C0B98810057D903 /* MaintenanceRepository.swift */; };
+		F117CEC82C0B98940057D903 /* MaintenanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F117CEC72C0B98940057D903 /* MaintenanceService.swift */; };
+		F117CECE2C0B98D60057D903 /* MaintenanceViewTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F117CECD2C0B98D60057D903 /* MaintenanceViewTable.swift */; };
+		F117CED32C0B98E70057D903 /* MaintenanceViewItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F117CED22C0B98E70057D903 /* MaintenanceViewItemTable.swift */; };
+		F117CED82C0B98FB0057D903 /* MaintenanceViewNewRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F117CED72C0B98FB0057D903 /* MaintenanceViewNewRecord.swift */; };
+		F117CEE02C0B990D0057D903 /* MaintenanceViewEditRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F117CEDF2C0B990D0057D903 /* MaintenanceViewEditRecord.swift */; };
 		F126152D2C0A8A5E007721DE /* PSFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F126152C2C0A8A5E007721DE /* PSFirestore.swift */; };
 		F12615322C0A8A6E007721DE /* PSRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12615312C0A8A6E007721DE /* PSRepository.swift */; };
 		F12615372C0A8A7D007721DE /* PSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12615362C0A8A7D007721DE /* PSService.swift */; };
@@ -79,6 +86,13 @@
 		D98748DE2BF66F7F00DFAE63 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		D98748E62BF6734300DFAE63 /* ItemMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenuView.swift; sourceTree = "<group>"; };
 		D98748F12BF67ED200DFAE63 /* EmployeeViewTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewTable.swift; sourceTree = "<group>"; };
+		F117CEBD2C0B98660057D903 /* MaintenanceFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceFirestore.swift; sourceTree = "<group>"; };
+		F117CEC22C0B98810057D903 /* MaintenanceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceRepository.swift; sourceTree = "<group>"; };
+		F117CEC72C0B98940057D903 /* MaintenanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceService.swift; sourceTree = "<group>"; };
+		F117CECD2C0B98D60057D903 /* MaintenanceViewTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceViewTable.swift; sourceTree = "<group>"; };
+		F117CED22C0B98E70057D903 /* MaintenanceViewItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceViewItemTable.swift; sourceTree = "<group>"; };
+		F117CED72C0B98FB0057D903 /* MaintenanceViewNewRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceViewNewRecord.swift; sourceTree = "<group>"; };
+		F117CEDF2C0B990D0057D903 /* MaintenanceViewEditRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceViewEditRecord.swift; sourceTree = "<group>"; };
 		F126152C2C0A8A5E007721DE /* PSFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSFirestore.swift; sourceTree = "<group>"; };
 		F12615312C0A8A6E007721DE /* PSRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSRepository.swift; sourceTree = "<group>"; };
 		F12615362C0A8A7D007721DE /* PSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSService.swift; sourceTree = "<group>"; };
@@ -165,6 +179,7 @@
 				D98748D92BF66F2500DFAE63 /* Employee */,
 				F161E93D2C094FEB00819559 /* Client */,
 				F12615282C0A8A2D007721DE /* ProductAndService */,
+				F117CEAE2C0B97A10057D903 /* Maintenance */,
 				0CB9AB532BE6DDD100299A6B /* Assets.xcassets */,
 				0CB9AB552BE6DDD100299A6B /* Preview Content */,
 			);
@@ -217,6 +232,28 @@
 				D98748E62BF6734300DFAE63 /* ItemMenuView.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		F117CEAE2C0B97A10057D903 /* Maintenance */ = {
+			isa = PBXGroup;
+			children = (
+				F117CEBD2C0B98660057D903 /* MaintenanceFirestore.swift */,
+				F117CEC22C0B98810057D903 /* MaintenanceRepository.swift */,
+				F117CEC72C0B98940057D903 /* MaintenanceService.swift */,
+				F117CECC2C0B98A40057D903 /* ViewTable */,
+				F117CED72C0B98FB0057D903 /* MaintenanceViewNewRecord.swift */,
+				F117CEDF2C0B990D0057D903 /* MaintenanceViewEditRecord.swift */,
+			);
+			path = Maintenance;
+			sourceTree = "<group>";
+		};
+		F117CECC2C0B98A40057D903 /* ViewTable */ = {
+			isa = PBXGroup;
+			children = (
+				F117CECD2C0B98D60057D903 /* MaintenanceViewTable.swift */,
+				F117CED22C0B98E70057D903 /* MaintenanceViewItemTable.swift */,
+			);
+			path = ViewTable;
 			sourceTree = "<group>";
 		};
 		F12615282C0A8A2D007721DE /* ProductAndService */ = {
@@ -415,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F117CED82C0B98FB0057D903 /* MaintenanceViewNewRecord.swift in Sources */,
 				F1B689EA2C0617C80033B159 /* EmployeeViewItemTable.swift in Sources */,
 				D98748F22BF67ED200DFAE63 /* EmployeeViewTable.swift in Sources */,
 				F14210102C04E5DA003CCC91 /* EmployeeService.swift in Sources */,
@@ -424,16 +462,22 @@
 				F126152D2C0A8A5E007721DE /* PSFirestore.swift in Sources */,
 				F12615482C0A8AB9007721DE /* PSViewItemTable.swift in Sources */,
 				F1B689FF2C0630250033B159 /* EmployeeViewNewRecord.swift in Sources */,
+				F117CEC32C0B98810057D903 /* MaintenanceRepository.swift in Sources */,
 				F12615432C0A8AA6007721DE /* PSViewTable.swift in Sources */,
 				F161E9672C0950AE00819559 /* ClientViewItemTable.swift in Sources */,
+				F117CEE02C0B990D0057D903 /* MaintenanceViewEditRecord.swift in Sources */,
 				F142100B2C04E4B9003CCC91 /* EmployeeRepository.swift in Sources */,
 				F161E93F2C09501100819559 /* ClientFirestore.swift in Sources */,
 				F161E95F2C09509D00819559 /* ClientViewTable.swift in Sources */,
 				0CB9AB522BE6DDCF00299A6B /* ContentView.swift in Sources */,
+				F117CEBE2C0B98660057D903 /* MaintenanceFirestore.swift in Sources */,
 				F126154D2C0A8ACE007721DE /* PSViewNewRecord.swift in Sources */,
 				F161E9442C09502400819559 /* ClientRepository.swift in Sources */,
+				F117CEC82C0B98940057D903 /* MaintenanceService.swift in Sources */,
 				D98748E72BF6734300DFAE63 /* ItemMenuView.swift in Sources */,
+				F117CED32C0B98E70057D903 /* MaintenanceViewItemTable.swift in Sources */,
 				0CB9AB502BE6DDCF00299A6B /* notiAutoSystemApp.swift in Sources */,
+				F117CECE2C0B98D60057D903 /* MaintenanceViewTable.swift in Sources */,
 				F14210062C04E1F1003CCC91 /* EmployeeFirestore.swift in Sources */,
 				F12615322C0A8A6E007721DE /* PSRepository.swift in Sources */,
 				F1B68A042C0630360033B159 /* EmployeeViewEditRecord.swift in Sources */,
